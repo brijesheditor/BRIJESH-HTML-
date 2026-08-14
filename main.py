@@ -57,7 +57,7 @@ async def start_command(_, message: Message):
         "🔓 /glassmorphism → Glass Effect\n"
         "🔓 /cyberpunk → Neon Tech\n"
         "━━━━━━━━━━━━━━━━━━\n"
-        "👑 By: [ITsGOlU](https://t.me/ITSGOLU_OFFICIAL)"
+        "👑 By: [𝐌𝐑 𝐁𝐑𝐈𝐉𝐄𝐒𝐇](https://t.me/Oye_brijesh)"
     )
 
 @client.on_message(filters.command("neumorphic") & filters.private)
@@ -98,7 +98,7 @@ async def process_txt_to_html(client: Client, message: Message, theme: str):
         elif theme == "cyberpunk": await extract_links_cyberpunk(file_path, output_path) # FIXED TYPO
         else: raise ValueError("Invalid theme")
 
-        await msg.reply_document(document=output_path, file_name=f"{original_name}.html", caption=f"✅ Theme: `{theme}` | By ITsGOlU")
+        await msg.reply_document(document=output_path, file_name=f"{original_name}.html", caption=f"✅ Theme: `{theme}` | By 𝐌𝐑 𝐁𝐑𝐈𝐉𝐄𝐒𝐇 ")
     except Exception as e:
         await msg.reply(f"❌ Error: `{str(e)}`")
     finally:
@@ -267,7 +267,7 @@ async def extract_links_modern_dark(input_file, output_file):
     total_images = len(image_links)
 
     # Fixed CSS for Grid and Sidebar
-    html_content = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ITsGOlU Viewer</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
+    html_content = f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>𝐌𝐑 𝐁𝐑𝐈𝐉𝐄𝐒𝐇 Viewer</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
         :root {{ --primary: #6366f1; --primary-dark: #4f46e5; --secondary: #ec4899; --bg-main: #0f172a; --bg-secondary: #1e293b; --bg-card: #1e293b; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #334155; --sidebar-width: 260px; }}
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-main); color: var(--text-primary); }}
